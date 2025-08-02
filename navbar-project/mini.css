@@ -1,0 +1,94 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "Raleway", sans-serif;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(photo.jpg);
+    background-size: cover;
+}
+#check{
+    display: none;
+}
+.hambar_btn{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.menubar{
+    width: 300px;
+    height: 100vh;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    position: fixed;
+    left: -300px;
+    transition: all 0.3s linear;
+}
+.menu{
+    line-height: 60px;
+    position: absolute;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.cross_btn{
+    position: absolute;
+    font-size: 20px;
+    color: grey;
+    top: 18px;
+    left: 270px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.menubar .items li{
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 20px;
+    box-sizing: border-box; 
+}
+.lists a{
+    text-decoration: none;
+    color: white;
+}
+.items{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.social_media{
+    position: absolute;
+    top: 650px;
+    left: 105px;
+    letter-spacing: 3px;
+}
+.social_media a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+.menubar .items li:hover{
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+.social_media a:hover{
+   opacity: 1;
+   transform: scale(1.1);
+}
+.hambar_btn:hover{
+    font-size: 35px;
+}
+.cross_btn:hover{
+    font-size: 25px;
+}
+#check:checked ~ .menubar{
+    left: 0px;
+}
+#check:checked ~ .hambar_btn{
+    display: none;
+}

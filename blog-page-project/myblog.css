@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.hero{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 2rem;
+    color: white;
+    background-color: #54657c;
+}
+.hero .heading_one{
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.hero .heading_two{
+  font-family: 'My Soul' , cursive;
+  font-size: 4rem;
+}
+.navbar{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border-bottom: 3px solid #54657c;
+    margin: 0 auto;
+     position: relative;
+}
+#check{
+  display: none;
+}
+.hamburger{
+  position: absolute;
+  left: 95%;
+}
+.ham_btn{
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  left: 95%;
+  color: rgb(148, 148, 148);
+  font-weight: 500;
+  font-size: medium;
+  transition: all 0.2s ease-in-out;
+}
+.cross_btn{
+  position: absolute;
+  background-color: white;
+  left: 95%;
+  color: rgb(148, 148, 148);
+  font-weight: 500;
+  font-size: medium;
+  padding-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.cross_btn:hover, .ham_btn:hover{
+  color: #54657c;
+  font-size: larger;
+}
+.nav_right a{
+  font-family: 'Times New Roman', serif;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(148, 148, 148);
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+.nav_right{
+  position: relative;
+  padding-right: 10px;
+  background-color: white;
+  z-index: 12;
+  box-sizing: border-box;
+  right: -10px;
+}
+.nav_left a, .nav_right .home{
+  font-family: 'Times New Roman', serif;
+  text-decoration: none;
+  color: #54657c;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.nav_right a:hover{
+  color: #54657c;
+}
+.menubar{
+  box-sizing: border-box;
+  width: 200px;
+  background-color: white;
+  position: fixed;
+  z-index: 15;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #54657c;
+  padding: 10px 0;
+  right: -1000px;
+  transition: all 0.6s linear;
+  top: 37%;
+}
+.items{
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+.items a{
+  text-decoration: none;
+  color: rgb(148, 148, 148);
+}
+.items:hover{
+  background-color: rgb(239, 238, 238);
+}
+.items a:hover{
+  color: #54657c;
+}
+.content{
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+.card{
+  margin: 20px 20px;
+  text-align: center;
+  position: relative;
+  width: 350px;
+  height: 300px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 6px 6px 4px #54657c;
+}
+img{
+  border-radius: 4px 4px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+.card h4{
+  padding: 5px 2px;
+}
+.card p{
+  font-size: small;
+  box-sizing: border-box;
+  padding: 10px 5px;
+}
+.card button{
+  position: absolute;
+  padding: 3px 5px;
+  background-color: #54657c;
+  color: white;
+  border: 2px solid #54657c;
+  border-radius: 6px;
+  font-size: smaller;
+  bottom: 10px;
+  left: 140px;
+}
+.card a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+@media(max-width: 600px){
+  .nav_right{
+    right: -1100px;
+  }
+}
+#check:checked ~ .cross_btn{
+    z-index: 11;
+}
+#check:checked ~ .menubar{
+  right: 3%;
+}
